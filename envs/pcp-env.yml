@@ -12,24 +12,23 @@ dependencies:
   - tqdm
   - kiwisolver
   - pip
-  
- - pillow
- - urllib3
- - folium
- - jupyter
- - jupyterlab
- - numpy
- - pandas
- - pdal
- - python-pdal
- - plotly
- - pythreejs
- - pyproj
- - ipyvolume
- - shapely
- - seaborn
- - scikit-learn
- - tqdm
- - ipyleaflet
- - ipywidgets
- - widgetsnbextension
+  - pillow
+  - urllib3
+  - folium
+  - jupyter
+  - jupyterlab
+  - numpy
+  - pandas
+  - pdal
+  - python-pdal
+  - plotly
+  - pythreejs
+  - pyproj
+  - ipyvolume
+  - shapely
+  - seaborn
+  - scikit-learn
+  - tqdm
+  - ipyleaflet
+  - ipywidgets
+  - widgetsnbextension
