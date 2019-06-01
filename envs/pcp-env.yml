@@ -2,7 +2,17 @@ name: pcp-env
 channels:
  - conda-forge
 dependencies:
- - python=3
+ dependencies:
+  # Core scientific python
+  - numpy
+  - matplotlib
+  - python>=3.6
+  - pyqt
+  - seaborn
+  - tqdm
+  - kiwisolver
+  - pip
+  
  - pillow
  - urllib3
  - folium
