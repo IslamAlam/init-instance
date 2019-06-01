@@ -1,0 +1,51 @@
+name: mdml
+channels:
+  - conda-forge
+
+dependencies:
+  # Core scientific python
+  - numpy
+  - matplotlib
+  - python>=3.6
+  - pyqt
+  - seaborn
+  - tqdm
+  - kiwisolver
+  - pip
+
+  # Spatial packages
+  - rasterstats
+  - geopy
+  - cartopy
+  - geopandas
+  - rasterio
+  - contextily
+  - pysal
+  - pyproj
+  - folium
+  - gdal
+  - libgdal
+  - kealib
+  - geocoder
+  - geojson
+  - earthpy
+  - earthengine-api
+
+  # Natural language processing
+  - tweepy
+  - nltk
+  - textblob
+
+  # Jupyter Environment
+  - autopep8
+  - notebook
+  - ipython
+  - jupyter_contrib_nbextensions
+  - jupyterlab
+  - nb_conda
+
+  - pip:
+      - nbclean
+      - mapboxgl
+      - hydrofunctions
+      - scikit-learn
