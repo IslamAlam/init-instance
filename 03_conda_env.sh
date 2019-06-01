@@ -2,8 +2,11 @@
 # Go to home directory
 cd ~
 
-conda env create -f envs/mdml.yml
-conda env create -f envs/pcp-env.yml
+scriptDir=$(dirname -- "$(readlink -f -- "$BASH_SOURCE")")
+
+
+conda env create -f $scriptDir/envs/mdml.yml
+conda env create -f $scriptDir/envs/pcp-env.yml
 
 conda activate mdml
 
