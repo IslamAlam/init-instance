@@ -2,7 +2,7 @@
 
 scriptDir=$(dirname -- "$(readlink -f -- "$BASH_SOURCE")")
 
-file= $scriptDir/src/01_start_jupyter.sh
+file=$scriptDir/src/01_start_jupyter.sh
 
 # First command-line arg is the file to be copied
 for homedir in /home/* ; do 
