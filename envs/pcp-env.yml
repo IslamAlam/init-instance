@@ -1,0 +1,25 @@
+name: pcp-env
+channels:
+ - conda-forge
+dependencies:
+ - python=3
+ - pillow
+ - urllib3
+ - folium
+ - jupyter
+ - jupyterlab
+ - numpy
+ - pandas
+ - pdal
+ - python-pdal
+ - plotly
+ - pythreejs
+ - pyproj
+ - ipyvolume
+ - shapely
+ - seaborn
+ - scikit-learn
+ - tqdm
+ - ipyleaflet
+ - ipywidgets
+ - widgetsnbextension
