@@ -5,6 +5,7 @@ source /opt/anaconda/etc/profile.d/conda.sh
 
 scriptDir=$(dirname -- "$(readlink -f -- "$BASH_SOURCE")")
 
+echo "Script dir: $scriptDir"
 
 conda env create -f $scriptDir/envs/mdml.yml
 conda env create -f $scriptDir/envs/pcp-env.yml
