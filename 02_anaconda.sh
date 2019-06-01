@@ -25,6 +25,14 @@ source /etc/profile.d/conda.sh
 
 # Refresh basically
 source $HOME/.bashrc
+conda init
+
+# Refresh basically
+source $HOME/.bashrc
+conda config --set auto_activate_base false
+
+# Refresh basically
+source $HOME/.bashrc
 
 conda update conda
 #conda install -c anaconda anaconda-navigator 
