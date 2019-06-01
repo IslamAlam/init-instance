@@ -1,9 +1,11 @@
 #!/bin/sh
-# Go to home directory
-cd ~
-source /opt/anaconda/etc/profile.d/conda.sh
 
 scriptDir=$(dirname -- "$(readlink -f -- "$BASH_SOURCE")")
+
+# Go to home directory
+# cd ~
+source /opt/anaconda/etc/profile.d/conda.sh
+
 
 echo "Script dir: $scriptDir"
 
