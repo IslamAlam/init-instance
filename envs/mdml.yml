@@ -30,6 +30,7 @@ dependencies:
   - geojson
   - earthpy
   - earthengine-api
+  - pyproj
 
   # Natural language processing
   - tweepy
@@ -43,6 +44,16 @@ dependencies:
   - jupyter_contrib_nbextensions
   - jupyterlab
   - nb_conda
+  
+  # Advanced 
+  - ipyvolume
+  - shapely
+  - seaborn
+  - tqdm
+  - ipyleaflet
+  - ipywidgets
+  - widgetsnbextension
+  - pythreejs
 
   - pip:
       - nbclean
