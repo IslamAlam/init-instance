@@ -29,4 +29,6 @@ source $HOME/.bashrc
 conda update conda
 #conda install -c anaconda anaconda-navigator 
 
+source /etc/profile.d/conda.sh
+
 echo "Installation is complete :)"
