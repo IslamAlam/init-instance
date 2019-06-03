@@ -12,9 +12,9 @@ latestVer=$(curl 'https://repo.anaconda.com/archive/' |
 # Echo latest version:
 echo "Anaconda3-${latestVer}-Linux-x86_64.sh" 
 # Download latest versanaconda-navigatorion:
-# curl "https://repo.anaconda.com/archive/Anaconda3-${latestVer}-Linux-x86_64.sh" > Anaconda3-latest-Linux-x86_64.sh
+curl "https://repo.anaconda.com/archive/Anaconda3-${latestVer}-Linux-x86_64.sh" > Anaconda3-latest-Linux-x86_64.sh
 
-curl "https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh" > Anaconda3-latest-Linux-x86_64.sh
+# curl "https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh" > Anaconda3-latest-Linux-x86_64.sh
 
 bash Anaconda3-latest-Linux-x86_64.sh -b -p /opt/anaconda
 rm Anaconda3-latest-Linux-x86_64.sh
