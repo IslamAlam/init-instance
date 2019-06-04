@@ -38,15 +38,18 @@ scriptDir=$(dirname -- "$(readlink -f -- "$BASH_SOURCE")")
 curl -fsSL https://raw.githubusercontent.com/jupyterhub/jupyterhub/master/docs/environment.yml -o $scriptDir/envs/jhub_docs.yml
 
 conda env create -f $scriptDir/envs/jhub_docs.yml
-conda install -n jhub_docs -c conda-forge jupyterlab 
+# conda install -y -n jhub_docs -c conda-forge jupyterlab
+
 conda activate jhub_docs
+conda install -y -c anaconda jupyter
+conda install -y -c conda-forge jupyterlab
+conda install -y nb_conda_kernels
+conda install -y -c conda-forge ipyleaflet
+
 jupyter labextension install @jupyterlab/hub-extension
-conda install -n jhub_docs nb_conda_kernels
 jupyter labextension install @jupyter-widgets/jupyterlab-manager
 jupyter labextension install ipyvolume
 jupyter labextension install jupyter-threejs
-
-conda install -y -c conda-forge ipyleaflet
 jupyter labextension install jupyter-leaflet
 jupyter labextension install @jupyter-widgets/jupyterlab-manager
 
