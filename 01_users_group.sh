@@ -9,12 +9,12 @@ declare -a userNames2=("louise" "xianbin" "islam" "magdalena")
 
 declare -a groupName='Team'
 
-usage() { echo "Usage: $0 [-m <ssh||pass>] [-p <mdml||lab>] []" 1>&2; exit 1; }
+usage() { echo "Usage: $0 [-m <ssh||pass>] [-p <password as string>]  [-g <mdml||lab>] []" 1>&2; exit 1; }
 
 
-while getopts ":s:p:" o; do
+while getopts ":m:p:g:" o; do
     case "${o}" in
-        s)
+        m)
             m=${OPTARG}
             #((s == 45 || s == 90)) || usage
             echo "-m ${OPTARG}"
@@ -23,13 +23,17 @@ while getopts ":s:p:" o; do
             p=${OPTARG}
             echo "-p ${OPTARG}"
             ;;
+        g)
+            g=${OPTARG}
+            echo "-g ${OPTARG}"
+            ;;
         *)
             usage
             ;;
     esac
 done
 
-case "$p" in 
+case "$g" in 
     *mdml*)
         # Do stuff
         echo "The created users will be for MDML: $userNames1"
