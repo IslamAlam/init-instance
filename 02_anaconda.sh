@@ -19,7 +19,7 @@ curl "https://repo.anaconda.com/archive/Anaconda3-${latestVer}-Linux-x86_64.sh" 
 
 # Installing in silent mode
 bash Anaconda3-latest-Linux-x86_64.sh -f -b -p /opt/anaconda
-
+chmod -R 777 /opt/anaconda
 # To run the silent installation of Miniconda for macOS or Linux, specify the -b and -p arguments of the bash installer. The following arguments are supported:
 
 # -b—Batch mode with no PATH modifications to ~/.bashrc. Assumes that you agree to the license agreement. Does not edit the .bashrc or .bash_profile files.
