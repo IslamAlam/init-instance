@@ -35,6 +35,9 @@ scriptDir=$(dirname -- "$(readlink -f -- "$BASH_SOURCE")")
 curl -fsSL https://raw.githubusercontent.com/jupyterhub/jupyterhub/master/docs/environment.yml -o $scriptDir/envs/jhub_docs.yml
 
 conda env create -f $scriptDir/envs/jhub_docs.yml
+conda install -n jhub_docs -c conda-forge jupyterlab 
+conda activate jhub_docs
+jupyter labextension install @jupyterlab/hub-extension
 
 
 echo "Script dir: $scriptDir"
