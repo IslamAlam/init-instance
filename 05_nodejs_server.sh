@@ -6,7 +6,7 @@ domain="jupyter.hopto.org" # Setup a domain (needed for SSL certificate)
 HOSTNAME="jupyterhub" # The hostname of the server
 
 
-sudo apt install -y nginx
+apt install -y nginx
 
 git clone https://github.com/letsencrypt/letsencrypt
 cd letsencrypt
