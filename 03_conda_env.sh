@@ -1,6 +1,10 @@
 #!/bin/sh
 
-scriptDir=$(dirname -- "$(readlink -f -- "$BASH_SOURCE")")
+# Add conda to the shell env
+source /opt/anaconda/etc/profile.d/conda.sh
+
+
+
 
 conda install -c -y conda-forge nodejs   # or some other way to have a recent node
 jupyter labextension install @jupyter-widgets/jupyterlab-manager
@@ -19,9 +23,7 @@ jupyter labextension install @jupyter-widgets/jupyterlab-manager
 #jupyter labextension install jupyter-leaflet
 #jupyter labextension install @jupyter-widgets/jupyterlab-manager
 
-# Go to home directory
-# cd ~
-source /opt/anaconda/etc/profile.d/conda.sh
+scriptDir=$(dirname -- "$(readlink -f -- "$BASH_SOURCE")")
 
 
 echo "Script dir: $scriptDir"
