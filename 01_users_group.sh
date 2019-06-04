@@ -54,7 +54,7 @@ esac
 groupadd $groupName
 if [ -z $m ]
 then
-  echo "sorry you didn't give me a value"
+  echo "sorry you didn't give me a value for -m as <ssh||pass>"
   exit 2
 elif [[ ! -z $m ]] && [[ $m == *"ssh"* ]]
 then  
