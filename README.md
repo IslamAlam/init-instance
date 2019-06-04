@@ -28,7 +28,9 @@ To run it one by one, please run the following:
   ` `
   
   ## Credit
-  
+  1. [Installation of Jupyterhub on remote server](https://github.com/jupyterhub/jupyterhub/wiki/Installation-of-Jupyterhub-on-remote-server)
+  2. [JupyterLab on JupyterHub](https://jupyterlab.readthedocs.io/en/stable/user/jupyterhub.html#jupyterlab-on-jupyterhub)
+  3. [Installation JupyterLab](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html)
   2. [ Jupyterhub NGINX reverse proxy with SSL, replace HOSTNAME with a hostname or _ ](https://gist.github.com/zonca/08c413a37401bdc9d2a7f65a7af44462)
   3. [ A service (init.d) script for jupyterhub ](https://gist.github.com/zonca/aaeaf3c4e7339127b482d759866e5f39)
   4. [Deploy Jupyterhub on a Virtual Machine for a Workshop](https://zonca.github.io/2016/04/jupyterhub-sdsc-cloud.html)
