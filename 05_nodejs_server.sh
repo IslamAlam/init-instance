@@ -20,14 +20,16 @@ if [ -e $file_location ]; then
   echo "File $file_location already exists!"
 else
   cat > $file_location <<EOF
-
 user www-data;
-worker_processes 4;
+worker_processes auto;
 pid /run/nginx.pid;
+include /etc/nginx/modules-enabled/*.conf;
 
 events {
-  worker_connections 1024;
+	worker_connections 768;
+	# multi_accept on;
 }
+
 
 http {
 
@@ -36,7 +38,7 @@ http {
 
     server {
         listen 80;
-        server_name $HOSTNAME;
+        server_name jupyterhub ;
         rewrite        ^ https://$host$request_uri? permanent;
     }
 
@@ -44,13 +46,11 @@ http {
         listen 443;
         client_max_body_size 50M;
 
-        server_name $HOSTNAME;
+        server_name jupyterhub ;
 
         ssl on;
         ssl_certificate /etc/letsencrypt/live/$domain/cert.pem;
         ssl_certificate_key /etc/letsencrypt/live/$domain/privkey.pem;
-        # ssl_certificate /etc/nginx/ssl/nginx.crt;
-        # ssl_certificate_key /etc/nginx/ssl/nginx.key;
 
         ssl_ciphers "AES128+EECDH:AES128+EDH";
         ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
