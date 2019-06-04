@@ -6,6 +6,6 @@ Repo clone:
 
   `chmod +x scripts/`
 
-  `sudo bash ./scripts/01_users_group.sh`
+  `bash 01_users_group.sh -m pass -g lab -p "D6!o7PuEid2JvS*EeC%zU7qKWzn!%q"`
 
   `sudo bash ./scripts/02_anaconda.sh`
