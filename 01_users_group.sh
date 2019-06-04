@@ -18,7 +18,6 @@ while getopts ":s:p:" o; do
             m=${OPTARG}
             #((s == 45 || s == 90)) || usage
             echo "-m ${OPTARG}"
-            m=${OPTARG}
             ;;
         p)
             p=${OPTARG}
