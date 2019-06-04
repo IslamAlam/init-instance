@@ -1,10 +1,17 @@
 #!/bin/sh
+
+$
+# Declare input for the script 
+domain="jupyterhub.ddns.net" # Setup a domain (needed for SSL certificate)
+HOSTNAME="jupyterhub" # The hostname of the server
+
+
 sudo apt install -y nginx
 
 git clone https://github.com/letsencrypt/letsencrypt
 cd letsencrypt
 sudo service nginx stop
-./letsencrypt-auto certonly --standalone -d jupyterhub.ddns.net
+./letsencrypt-auto certonly --standalone -d $domain
 
 mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.bk
 
@@ -29,7 +36,7 @@ http {
 
     server {
         listen 80;
-        server_name HOSTNAME;
+        server_name $HOSTNAME;
         rewrite        ^ https://$host$request_uri? permanent;
     }
 
@@ -37,11 +44,11 @@ http {
         listen 443;
         client_max_body_size 50M;
 
-        server_name HOSTNAME;
+        server_name $HOSTNAME;
 
         ssl on;
-        ssl_certificate /etc/letsencrypt/live/jupyterhub.ddns.net/cert.pem;
-        ssl_certificate_key /etc/letsencrypt/live/jupyterhub.ddns.net/privkey.pem;
+        ssl_certificate /etc/letsencrypt/live/$domain/cert.pem;
+        ssl_certificate_key /etc/letsencrypt/live/$domain/privkey.pem;
         # ssl_certificate /etc/nginx/ssl/nginx.crt;
         # ssl_certificate_key /etc/nginx/ssl/nginx.key;
 
