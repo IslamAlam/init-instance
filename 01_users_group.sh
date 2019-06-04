@@ -37,11 +37,11 @@ case "$g" in
     *mdml*)
         # Do stuff
         echo "The created users will be for MDML: $userNames1"
-        userNames=$userNames1
+        userNames=("${userNames1[@]}")                  #copy the array in another one 
         ;;
     *lab*)
       echo "The created users will be for TUM-Data-Lab: $userNames2"
-      userNames=$userNames2
+      userNames=("${userNames2[@]}")                  #copy the array in another one 
       ;;
 #    centos|rhel)
 #      echo "Hey! It is my favorite Server OS!"
