@@ -32,6 +32,7 @@ To run it one by one, please run the following:
   2. [JupyterLab on JupyterHub](https://jupyterlab.readthedocs.io/en/stable/user/jupyterhub.html#jupyterlab-on-jupyterhub)
   3. [Installation JupyterLab](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html)
   2. [ Jupyterhub NGINX reverse proxy with SSL, replace HOSTNAME with a hostname or _ ](https://gist.github.com/zonca/08c413a37401bdc9d2a7f65a7af44462)
+  5. [nb_conda_kernels](https://github.com/Anaconda-Platform/nb_conda_kernels)
   3. [ A service (init.d) script for jupyterhub ](https://gist.github.com/zonca/aaeaf3c4e7339127b482d759866e5f39)
   4. [Deploy Jupyterhub on a Virtual Machine for a Workshop](https://zonca.github.io/2016/04/jupyterhub-sdsc-cloud.html)
   5. [Quick Jupyterhub deployment for workshops with pre-built image](https://zonca.github.io/2016/04/jupyterhub-image-sdsc-cloud.html)
