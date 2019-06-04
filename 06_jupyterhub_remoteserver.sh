@@ -13,7 +13,7 @@ apt-get -y install npm nodejs
 npm install -g configurable-http-proxy
 
 # Install Jupyterhub (you may need to use sudo)
-pip3 install jupyterhub
+pip3 install -y jupyterhub
 
 # Install Jupyter notebook (/upgrade) (you may need to use sudo)
 pip3 install --upgrade notebook
@@ -29,9 +29,9 @@ declare -a fileNames=('/lib/systemd/system/jupyterhub.service' '/etc/systemd/sys
 for file_location in "${fileNames[@]}"
 do
    echo "$file_location"
-   if [ -e $file_location ]; then
+   if [ -f "$file_location" ]; then
      echo "File $file_location already exists!"
-     rm $file_location
+     rm "$file_location"
    fi
 cat > $file_location <<EOF
 [Unit]
