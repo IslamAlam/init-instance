@@ -15,8 +15,8 @@ sudo service nginx stop
 
 mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.bk
 
-file_location=/etc/nginx/nginx.conf 
-if [ -e $policy ]; then
+file_location='/etc/nginx/nginx.conf'
+if [ -e $file_location ]; then
   echo "File $file_location already exists!"
 else
   cat > $file_location <<EOF
