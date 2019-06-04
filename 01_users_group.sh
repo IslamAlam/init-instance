@@ -17,15 +17,15 @@ while getopts ":m:p:g:" o; do
         m)
             m=${OPTARG}
             #((s == 45 || s == 90)) || usage
-            echo "-m ${OPTARG}"
+            echo "The -m method of login is: ${OPTARG}"
             ;;
         p)
-            p=${OPTARG}
-            echo "-p ${OPTARG}"
+            PASSWORD=${OPTARG}
+            echo "The password is ${OPTARG}"
             ;;
         g)
             g=${OPTARG}
-            echo "-g ${OPTARG}"
+            echo "You have choosen group -g: ${OPTARG}"
             ;;
         *)
             usage
@@ -128,13 +128,11 @@ then
 
     for userName in "${userNames[@]}"
     do
-
-
         if $userName passwd $1 > /dev/null 2>&1; then
             echo "yes the user exists"
         else
-            echo "No, the user does not exist"
-            echo creating user $userName
+            echo "No, the user $userName does not exist"
+            echo "creating new user: $userName"
             echo $userName:$PASSWORD::::/home/$userName:/bin/bash | sudo newusers
 
             #  Start with creating a user:
