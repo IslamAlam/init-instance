@@ -144,6 +144,22 @@ then
             usermod -a -G $groupName $userName
         fi
     done
+    
+    # Also add AllowUsers ubuntu to /etc/ssh/sshd_config so that training users cannot SSH into the host machine.
+    # link: https://zonca.github.io/2016/04/jupyterhub-sdsc-cloud.html
+    
+    file_sshconfig="/etc/ssh/sshd_config"
+    append_string="AllowUsers ubuntu"
+    if grep -Fxq "$append_string" $file_sshconfig
+    then
+        # code if found
+        echo "$append_string is found into $file_sshconfig "
+    else
+        # code if not found
+        echo "Not found, $append_string will be added to $file_sshconfig"
+        echo "$append_string" >> $file_sshconfig
+    fi
+
 fi
 
 echo "List all group members of $groupName" 
