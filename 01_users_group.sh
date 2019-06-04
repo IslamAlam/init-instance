@@ -37,11 +37,11 @@ case "$g" in
     *mdml*)
         # Do stuff
         echo "The created users will be for MDML: $userNames1"
-        declare -a userNames=$userNames1
+        userNames=$userNames1
         ;;
     *lab*)
       echo "The created users will be for TUM-Data-Lab: $userNames2"
-      declare -a userNames=$userNames2
+      userNames=$userNames2
       ;;
 #    centos|rhel)
 #      echo "Hey! It is my favorite Server OS!"
