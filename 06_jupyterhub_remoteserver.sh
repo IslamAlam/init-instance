@@ -18,6 +18,9 @@
 # Install Jupyter notebook (/upgrade) (you may need to use sudo)
 # pip3 install --upgrade notebook
 
+# create dir if not exist
+mkdir -p /etc/jupyterhub
+
 # Create Jupyterhub configuration file
 jupyterhub --generate-config /etc/jupyterhub
 
