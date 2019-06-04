@@ -4,11 +4,11 @@
 source /opt/anaconda/etc/profile.d/conda.sh
 
 
-conda install -y -c conda-forge nodejs   # or some other way to have a recent node
-conda activate
+# conda install -y -c conda-forge nodejs   # or some other way to have a recent node
+# conda activate
 
 # conda environment in Jupyter Notebook
-conda install -y nb_conda
+# conda install -y nb_conda
 
 
 # Pip install Leaflet and ipyvolume
