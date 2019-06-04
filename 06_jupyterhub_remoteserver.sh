@@ -21,6 +21,39 @@ pip3 install --upgrade notebook
 # Create Jupyterhub configuration file
 jupyterhub --generate-config /etc/jupyterhub
 
+
+## Run jupyterhub as a system service
+
+declare -a fileNames=('/lib/systemd/system/jupyterhub.service' '/etc/systemd/system/jupyterhub.service'
+
+for file_location in "${fileNames[@]}"
+do
+   file_location='/lib/systemd/system/jupyterhub.service'
+   if [ -e $file_location ]; then
+     echo "File $file_location already exists!"
+   else
+     cat > $file_location <<EOF
+   [Unit]
+   Description=Jupyterhub
+
+   [Service]
+   User=root
+   Environment="PATH=/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/opt/anaconda/bin"
+   ExecStart=/usr/local/bin/jupyterhub -f /etc/jupyterhub/jupyterhub_config.py
+
+   [Install]
+   WantedBy=multi-user.target
+
+   EOF
+   fi
+done
+
+# 2. systemctl daemon-reload  to load the config
+systemctl daemon-reload
+
+# 4. To ensure it runs at startup
+systemctl enable jupyterhub.service
+
 # Start with a specific config file
 jupyterhub -f /etc/jupyterhub/jupyterhub_config.py
 
