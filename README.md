@@ -20,4 +20,11 @@ Repo clone:
   
   ` `
   
+  ## Credit
+  
+  2. [ Jupyterhub NGINX reverse proxy with SSL, replace HOSTNAME with a hostname or _ ](https://gist.github.com/zonca/08c413a37401bdc9d2a7f65a7af44462)
+  3. [ A service (init.d) script for jupyterhub ](https://gist.github.com/zonca/aaeaf3c4e7339127b482d759866e5f39)
+  4. [Deploy Jupyterhub on a Virtual Machine for a Workshop](https://zonca.github.io/2016/04/jupyterhub-sdsc-cloud.html)
+  5. [Quick Jupyterhub deployment for workshops with pre-built image](https://zonca.github.io/2016/04/jupyterhub-image-sdsc-cloud.html)
+  6.[Installation of Jupyterhub on remote server](https://github.com/jupyterhub/jupyterhub/wiki/Installation-of-Jupyterhub-on-remote-server)
   
