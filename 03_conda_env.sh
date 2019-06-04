@@ -14,7 +14,7 @@ jupyter labextension install @jupyter-widgets/jupyterlab-manager
 jupyter labextension install ipyvolume
 jupyter labextension install jupyter-threejs
 
-conda install -c -y conda-forge ipyleaflet
+conda install -y -c conda-forge ipyleaflet
 jupyter labextension install jupyter-leaflet
 jupyter labextension install @jupyter-widgets/jupyterlab-manager
 
