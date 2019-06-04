@@ -6,7 +6,7 @@ source /opt/anaconda/etc/profile.d/conda.sh
 
 
 
-conda install -c -y conda-forge nodejs   # or some other way to have a recent node
+conda install -y -c conda-forge nodejs   # or some other way to have a recent node
 jupyter labextension install @jupyter-widgets/jupyterlab-manager
 jupyter labextension install ipyvolume
 jupyter labextension install jupyter-threejs
