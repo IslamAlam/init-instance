@@ -1,6 +1,6 @@
 #!/bin/sh
 
-$
+
 # Declare input for the script 
 domain="jupyter.hopto.org" # Setup a domain (needed for SSL certificate)
 HOSTNAME="jupyterhub" # The hostname of the server
@@ -20,6 +20,7 @@ if [ -e $file_location ]; then
   echo "File $file_location already exists!"
 else
   cat > $file_location <<EOF
+
 user www-data;
 worker_processes auto;
 pid /run/nginx.pid;
@@ -38,15 +39,15 @@ http {
 
     server {
         listen 80;
-        server_name jupyterhub ;
-        rewrite        ^ https://$host$request_uri? permanent;
+        server_name $HOSTNAME ;
+        rewrite        ^ https://\$host\$request_uri? permanent;
     }
 
     server {
         listen 443;
         client_max_body_size 50M;
 
-        server_name jupyterhub ;
+        server_name $HOSTNAME ;
 
         ssl on;
         ssl_certificate /etc/letsencrypt/live/$domain/cert.pem;
@@ -68,15 +69,15 @@ http {
         error_log /var/log/nginx/error.log;
 
         #location ~ /(user-[a-zA-Z0-9]*)/static(.*) {
-        #    alias /usr/local/lib/python3.4/dist-packages/notebook/static/$2;
+        #    alias /usr/local/lib/python3.4/dist-packages/notebook/static/\$2;
         #}
 
         location / {
             proxy_pass http://localhost:8000;
 
-            proxy_set_header X-Real-IP $remote_addr;
-            proxy_set_header Host $host;
-            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Real-IP \$remote_addr;
+            proxy_set_header Host \$host;
+            proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
 
             proxy_set_header X-NginX-Proxy true;
         }
@@ -84,15 +85,15 @@ http {
         location ~* /(user/[^/]*)/(api/kernels/[^/]+/channels|terminals/websocket)/? {
             proxy_pass http://localhost:8000;
 
-            proxy_set_header X-Real-IP $remote_addr;
-            proxy_set_header Host $host;
-            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Real-IP \$remote_addr;
+            proxy_set_header Host \$host;
+            proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
 
             proxy_set_header X-NginX-Proxy true;
 
             # WebSocket support
             proxy_http_version 1.1;
-            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Upgrade \$http_upgrade;
             proxy_set_header Connection "upgrade";
             proxy_read_timeout 86400;
 
@@ -100,6 +101,7 @@ http {
     }
 
 }
+
 
 EOF
 fi
