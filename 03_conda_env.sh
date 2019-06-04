@@ -10,7 +10,7 @@ conda install -y -c conda-forge nodejs   # or some other way to have a recent no
 conda activate
 
 # conda environment in Jupyter Notebook
-conda install nb_conda
+conda install -y nb_conda
 
 
 # Install ipvloume and ipyleaflet
