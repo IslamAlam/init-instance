@@ -43,6 +43,5 @@ To run it one by one, please run the following:
   7. [Deploy Jupyterhub on a Virtual Machine for a Workshop](https://zonca.github.io/2016/04/jupyterhub-sdsc-cloud.html)
   
   8. [Quick Jupyterhub deployment for workshops with pre-built image](https://zonca.github.io/2016/04/jupyterhub-image-sdsc-cloud.html)
-  
   9.[Installation of Jupyterhub on remote server](https://github.com/jupyterhub/jupyterhub/wiki/Installation-of-Jupyterhub-on-remote-server)
   
