@@ -32,6 +32,10 @@ jupyter labextension install @jupyter-widgets/jupyterlab-manager
 
 scriptDir=$(dirname -- "$(readlink -f -- "$BASH_SOURCE")")
 
+curl -fsSL https://raw.githubusercontent.com/jupyterhub/jupyterhub/master/docs/environment.yml -o $scriptDir/envs/jhub_docs.yml
+
+conda env create -f $scriptDir/envs/jhub_docs.yml
+
 
 echo "Script dir: $scriptDir"
 
