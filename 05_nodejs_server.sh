@@ -2,7 +2,7 @@
 
 $
 # Declare input for the script 
-domain="jupyterhub.ddns.net" # Setup a domain (needed for SSL certificate)
+domain="jupyter.hopto.org" # Setup a domain (needed for SSL certificate)
 HOSTNAME="jupyterhub" # The hostname of the server
 
 
