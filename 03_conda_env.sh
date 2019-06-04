@@ -7,6 +7,9 @@ source /opt/anaconda/etc/profile.d/conda.sh
 
 
 conda install -y -c conda-forge nodejs   # or some other way to have a recent node
+conda activate
+
+# Install ipvloume and ipyleaflet
 jupyter labextension install @jupyter-widgets/jupyterlab-manager
 jupyter labextension install ipyvolume
 jupyter labextension install jupyter-threejs
