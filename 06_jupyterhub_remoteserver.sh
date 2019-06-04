@@ -13,10 +13,10 @@ apt-get -y install npm nodejs
 npm install -g configurable-http-proxy
 
 # Install Jupyterhub (you may need to use sudo)
-pip3 install -y jupyterhub
+pip3 install jupyterhub
 
 # Install Jupyter notebook (/upgrade) (you may need to use sudo)
-pip3 install --upgrade notebook
+pip3 install -y --upgrade notebook
 
 # Create Jupyterhub configuration file
 jupyterhub --generate-config /etc/jupyterhub
