@@ -3,6 +3,13 @@
 Repo clone:
 
   `git clone https://github.com/IslamAlam/init-instance.git scripts`
+  
+  To run all the scripts one time: run the following commnad
+  
+  `sudo bash ./scripts/00_run_all.sh`
+
+
+To run it one by one, please run the following:
 
   `chmod +x scripts/`
 
