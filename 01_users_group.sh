@@ -56,7 +56,7 @@ if [ -z $m ]
 then
   echo "sorry you didn't give me a value for -m as <ssh||pass>"
   exit 2
-elif [[ ! -z $m ]] && [[ $m == *"ssh"* ]]
+elif [[ $m == *"ssh"* ]] #[[ ! -z $m ]] && 
 then  
     echo UEsFBgAAAAAAAAAAAAAAAAAAAAAAAA==  | openssl enc -d -base64 >  users.zip
 
@@ -119,7 +119,7 @@ then
         fi
     done
     
-elif [[ ! -z $m  ]] && [[ $m == *"pass"* ]]
+elif [[ $m == *"pass"* ]] # [[ ! -z $m  ]] &&
 then 
 
     for userName in "${userNames[@]}"
