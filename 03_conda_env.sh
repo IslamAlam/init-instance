@@ -39,6 +39,31 @@ jupyter labextension install jupyter-threejs
 jupyter labextension install jupyter-leaflet
 jupyter labextension install @jupyter-widgets/jupyterlab-manager
 
+# JupyterLab LaTeX
+jupyter labextension install @jupyterlab/latex
+
+# jupyterlab-drawio
+jupyter labextension install jupyterlab-drawio
+
+# jupyterlab-toc A Table of Contents
+jupyter labextension install @jupyterlab/toc
+
+
+# Go to definition extension for JupyterLab
+jupyter labextension install @krassowski/jupyterlab_go_to_definition
+
+# jupyterlab_code_formatter
+pip install black
+jupyter labextension install @ryantam626/jupyterlab_code_formatter
+pip install jupyterlab_code_formatter
+jupyter serverextension enable --py jupyterlab_code_formatter
+# Remember to install one of the supported formatters (it's in the next section)
+
+# jupyterlab-git
+jupyter labextension install @jupyterlab/git
+pip install jupyterlab-git
+jupyter serverextension enable --py jupyterlab_git
+
 #####################################
 
 
