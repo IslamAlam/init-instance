@@ -16,7 +16,7 @@ npm install -g configurable-http-proxy
 pip3 install jupyterhub
 
 # Install Jupyter notebook (/upgrade) (you may need to use sudo)
-pip3 install -y --upgrade notebook
+pip3 install --upgrade notebook
 
 # Create Jupyterhub configuration file
 jupyterhub --generate-config /etc/jupyterhub
@@ -24,7 +24,7 @@ jupyterhub --generate-config /etc/jupyterhub
 
 ## Run jupyterhub as a system service
 
-declare -a fileNames=('/lib/systemd/system/jupyterhub.service' '/etc/systemd/system/jupyterhub.service'
+declare -a fileNames=('/lib/systemd/system/jupyterhub.service' '/etc/systemd/system/jupyterhub.service')
 
 for file_location in "${fileNames[@]}"
 do
