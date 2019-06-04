@@ -28,24 +28,25 @@ declare -a fileNames=('/lib/systemd/system/jupyterhub.service' '/etc/systemd/sys
 
 for file_location in "${fileNames[@]}"
 do
-   file_location='/lib/systemd/system/jupyterhub.service'
+   echo "$file_location"
    if [ -e $file_location ]; then
      echo "File $file_location already exists!"
-   else
-     cat > $file_location <<EOF
-   [Unit]
-   Description=Jupyterhub
-
-   [Service]
-   User=root
-   Environment="PATH=/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/opt/anaconda/bin"
-   ExecStart=/usr/local/bin/jupyterhub -f /etc/jupyterhub/jupyterhub_config.py
-
-   [Install]
-   WantedBy=multi-user.target
-
-   EOF
+     rm $file_location
    fi
+cat > $file_location <<EOF
+[Unit]
+Description=Jupyterhub
+
+[Service]
+User=root
+Environment="PATH=/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/opt/anaconda/bin"
+ExecStart=/usr/local/bin/jupyterhub -f /etc/jupyterhub/jupyterhub_config.py
+
+[Install]
+WantedBy=multi-user.target
+
+EOF
+   
 done
 
 # 2. systemctl daemon-reload  to load the config
