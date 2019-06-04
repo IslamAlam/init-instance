@@ -39,7 +39,7 @@ conda init
 
 conda config --set auto_activate_base false
 
-conda update conda
+conda update -y conda
 # echo '. /opt/anaconda/etc/profile.d/conda.sh' >> ~/.bashrc 
 
 # sudo ln -s /opt/anaconda/etc/profile.d/conda.sh /etc/profile.d/conda.sh
