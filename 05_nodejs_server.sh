@@ -104,5 +104,7 @@ http {
 EOF
 fi
 
+# Start the nginx
+sudo service nginx start
 
 
