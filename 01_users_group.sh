@@ -16,10 +16,13 @@ while getopts ":s:p:" o; do
     case "${o}" in
         s)
             m=${OPTARG}
-            ((s == 45 || s == 90)) || usage
+            #((s == 45 || s == 90)) || usage
+            echo "-m ${OPTARG}"
+            m=${OPTARG}
             ;;
         p)
             p=${OPTARG}
+            echo "-p ${OPTARG}"
             ;;
         *)
             usage
