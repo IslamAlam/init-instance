@@ -26,7 +26,7 @@ jupyterhub -f /etc/jupyterhub/jupyterhub_config.py
 # Configure using command line options
 #     jupyterhub --ip 10.0.1.2 --port 443 --ssl-key my_ssl.key --ssl-cert my_ssl.cert
 
-: '
+<<COMMENT
 
  ## Installation of Jupyterhub on remote server
 
@@ -87,3 +87,4 @@ jupyterhub -f /etc/jupyterhub/jupyterhub_config.py
     `$ jupyterhub --generate-config`
     
  '
+ COMMENT
