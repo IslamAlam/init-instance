@@ -1,5 +1,6 @@
 #!/bin/bash
 # link: https://github.com/jupyterhub/jupyterhub/wiki/Installation-of-Jupyterhub-on-remote-server
+# https://zonca.github.io/2016/04/jupyterhub-sdsc-cloud.html
 
 # Installing Python3 (dependency of jupyterhub is on python3)
 apt-get -y install python3-pip
