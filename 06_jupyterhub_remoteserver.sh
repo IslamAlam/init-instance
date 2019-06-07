@@ -21,6 +21,8 @@
 # create dir if not exist
 mkdir -p /etc/jupyterhub
 
+conda activate jupyterhub
+
 # Create Jupyterhub configuration file
 jupyterhub --generate-config /etc/jupyterhub
 
