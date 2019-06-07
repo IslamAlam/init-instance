@@ -25,11 +25,11 @@ scriptDir=$(dirname -- "$(readlink -f -- "$BASH_SOURCE")")
 #####################################
 # Jupyterlab section
 
-conda env create -f $scriptDir/envs/jhub_docs.yml
+conda env create -f $scriptDir/envs/jupyterhub.yml
 # conda install -y -n jhub_docs -c conda-forge jupyterlab
 
 conda activate jupyterhub
-
+conda install -y -c conda-forge nodejs 
 npm install -g configurable-http-proxy
 
 jupyter labextension install @jupyterlab/hub-extension
