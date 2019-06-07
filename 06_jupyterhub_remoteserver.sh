@@ -21,6 +21,12 @@
 # create dir if not exist
 mkdir -p /etc/jupyterhub
 
+
+# http://tljh.jupyter.org/en/latest/howto/content/share-data.html
+sudo mkdir -p /srv/data/mdml
+
+sudo ln -s /srv/data/mdml /etc/skel
+
 source /opt/anaconda/etc/profile.d/conda.sh
 conda activate jupyterhub
 
