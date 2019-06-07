@@ -33,6 +33,32 @@ conda activate jupyterhub
 # Create Jupyterhub configuration file
 jupyterhub --generate-config /etc/jupyterhub
 
+
+
+#!/bin/sh
+
+source /opt/anaconda/etc/profile.d/conda.sh
+
+conda activate jupyterhub
+
+jupyterhub -f /etc/jupyterhub/jupyterhub_config.py
+
+## Create script to lunch jupyterhub 
+script='~/00_lunchjupyter.sh'
+cat > $script <<EOF
+
+#!/bin/sh
+
+source /opt/anaconda/etc/profile.d/conda.sh
+
+conda activate jupyterhub
+
+jupyterhub -f /etc/jupyterhub/jupyterhub_config.py
+# To run this script in silent mode:
+# nohup bash 00_lunchjupyter.sh &
+EOF
+
+
 config_path='/etc/jupyterhub/jupyterhub_config.py'
 cat > $config_path <<EOF
 c.Authenticator.admin_users = {'islam', 'ubuntu'}
