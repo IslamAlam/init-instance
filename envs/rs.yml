@@ -1,0 +1,64 @@
+name: rs
+channels:
+  - conda-forge
+
+dependencies:
+  # Core scientific python
+  - numpy
+  - matplotlib
+  - python>=3.6
+  - pyqt
+  - seaborn
+  - tqdm
+  - kiwisolver
+  - pip
+  - xarray
+
+  # Spatial packages
+  - rasterstats
+  - geopy
+  - cartopy
+  - geopandas
+  - rasterio
+  - contextily
+  - pysal
+  - pyproj
+  - folium
+  - gdal
+  - libgdal
+  - kealib
+  - geocoder
+  - geojson
+  - earthpy
+  - rtree
+  - xgeo
+  - shapely
+  - descartes
+  - google-api-python-client
+  - pycrypto
+  - earthengine-api
+
+  # Natural language processing
+  - tweepy
+  - nltk
+  - textblob
+
+  # Jupyter Environment
+  - autopep8
+  - notebook
+  - ipython
+  - jupyter_contrib_nbextensions
+  - jupyterlab
+  - nb_conda
+  - ipyleaflet
+  - ipyvolume
+  - nodejs
+  - ipywidgets
+  - jupyter_contrib_nbextensions
+
+  - pip:
+      - nbclean
+      - mapboxgl
+      - hydrofunctions
+      - scikit-learn
+      - pythreejs
