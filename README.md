@@ -45,4 +45,6 @@ To run it one by one, please run the following:
   8. [Quick Jupyterhub deployment for workshops with pre-built image](https://zonca.github.io/2016/04/jupyterhub-image-sdsc-cloud.html)
   
   9.[Installation of Jupyterhub on remote server](https://github.com/jupyterhub/jupyterhub/wiki/Installation-of-Jupyterhub-on-remote-server)
+  10. [OpenStack - Creating and Attaching a Volume into an Instance](http://www.darwinbiler.com/openstack-creating-and-attaching-a-volume-into-an-instance/)
+  11. [Share data with your users](https://the-littlest-jupyterhub.readthedocs.io/en/latest/howto/content/share-data.html)
   
