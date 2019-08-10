@@ -2,7 +2,7 @@
 
 # This guide is taken from https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-18-04
 apt update && apt upgrade -y
-apt install -y install xfce4 xfce4-* gnome-icon-theme vnc4server novnc websockify python-numpy
+apt install -y xfce4 xfce4-* gnome-icon-theme vnc4server novnc websockify python-numpy
 
 
 vncserver
