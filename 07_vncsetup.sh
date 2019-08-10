@@ -22,7 +22,7 @@ EOF
 # The first command in the file, xrdb $HOME/.Xresources, tells VNC's GUI framework to read the server user's .Xresources file. .Xresources is where a user can make changes to certain settings of the graphical desktop, like terminal colors, cursor themes, and font rendering. The second command tells the server to launch Xfce, which is where you will find all of the graphical software that you need to comfortably manage your server.
 # To ensure that the VNC server will be able to use this new startup file properly, we'll need to make it executable.
 
-sudo chmod +x $HOME/.vnc/xstartup
+chmod +x $HOME/.vnc/xstartup
 # Now, restart the VNC server.
 
 vncserver
@@ -54,8 +54,6 @@ ExecStop=/usr/bin/vncserver -kill :%i
 [Install]
 WantedBy=multi-user.target
 EOF
-
-
 
 
 # Next, make the system aware of the new unit file.
