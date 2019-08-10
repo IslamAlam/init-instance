@@ -176,11 +176,18 @@ then
 fi
 
 
+# https://www.suhendro.com/2019/04/ubuntu-cloud-desktop-adding-gui-to-your-cloud-server-instance/
+
 cd /etc/ssl
 openssl req -x509 -nodes -newkey rsa:2048 -keyout novnc.pem -out novnc.pem -days 365
 chmod 644 novnc.pem
 
-websockify -D --web=/usr/share/novnc/ --cert=/etc/ssl/novnc.pem 6080 localhost:5901
+websockify -D --web=/usr/share/novnc/ --cert=/etc/ssl/novnc.pem 1234 localhost:5901
+
+if [[ $(crontab -l | egrep -v "^(#|$)" | grep -q '/usr/bin/websockify'; echo $?) == 1 ]]
+then
+    echo $(crontab -l ; echo '@reboot /usr/bin/websockify websockify -D --web=/usr/share/novnc/ --cert=/etc/ssl/novnc.pem 1234 localhost:5901') | crontab -
+fi
 
 # Point your browser to https://(server’s hostname or IP address):6080/vnc.html and login with VNC password.
 
