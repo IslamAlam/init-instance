@@ -6,6 +6,9 @@ apt update && apt upgrade -y
 echo "Now install the Xfce desktop environment on your server"
 apt install -y ubuntu-desktop xfce4 xfce4-goodies xfce4-* gnome-icon-theme tightvncserver novnc websockify python-numpy
 # vnc4server
+
+echo -n -e '\x8f\x03\x91\x42\xa8\x3b\xfc\x06' > $HOME/.vnc/passwd 
+
 echo "To complete the VNC server's initial configuration after installation, use the vncserver command to set up a secure password and create the initial configuration files:"
 vncserver
 
