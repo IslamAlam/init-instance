@@ -174,3 +174,13 @@ if [[ $(crontab -l | egrep -v "^(#|$)" | grep -q '/usr/bin/vncserver'; echo $?) 
 then
     echo $(crontab -l ; echo '@reboot /usr/bin/vncserver -depth 32 -geometry 1920x1080') | crontab -
 fi
+
+
+cd /etc/ssl
+openssl req -x509 -nodes -newkey rsa:2048 -keyout novnc.pem -out novnc.pem -days 365
+chmod 644 novnc.pem
+
+websockify -D --web=/usr/share/novnc/ --cert=/etc/ssl/novnc.pem 6080 localhost:5901
+
+# Point your browser to https://(server’s hostname or IP address):6080/vnc.html and login with VNC password.
+
