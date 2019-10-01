@@ -47,8 +47,9 @@ EOF
 # EOF
 
 # chown -R $USER ~/.Xauthority
-chown -R ubuntu ~/.Xauthority
-chown -R ubuntu ~/.vnc/xstartup
+chown -R ubuntu $HOME/.Xauthority
+chown -R ubuntu $HOME/.vnc/
+chown -R ubuntu $HOME/.vnc/xstartup
 
 # For gnome 
 # https://linode.com/docs/applications/remote-desktop/install-vnc-on-ubuntu-16-04/#connect-to-vnc-from-your-desktop
